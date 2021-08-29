@@ -4,4 +4,4 @@ from .models import StockList
 class StockListSerializer(ModelSerializer):
     class Meta:
         model = StockList
-        fields = ['id', 'stock', 'shares']
+        fields = ['id', 'stock', 'symbol', 'shares']
