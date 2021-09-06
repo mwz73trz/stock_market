@@ -2,6 +2,7 @@ import './App.css';
 import { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
+import StockQuotePage from './pages/StockQuotePage';
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Route path="/" component={HomePage} />
+            <Route path="/api/stock-quote/:symbol" exact component={StockQuotePage} />
           </div>
         </BrowserRouter>
       </div>

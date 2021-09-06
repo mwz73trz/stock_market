@@ -25,8 +25,20 @@ const fetchStocks = async () => {
   return await tryCatchFetch(url)
 }
 
+const getStockQuote = async (symbol) => {
+  let url = `${BASE_URL}api/stock-quote/${symbol}/`
+  console.log(url)
+  return await tryCatchFetch(url, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/JSON"
+    }
+  })
+}
+
 const myExport = {
   fetchStocks,
+  getStockQuote,
 }
 
 export default myExport;
