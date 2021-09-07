@@ -26,7 +26,7 @@ const fetchStocks = async () => {
 }
 
 const getStockQuote = async (symbol) => {
-  let url = `${BASE_URL}api/stock-quote/${symbol}/`
+  let url = `${BASE_URL}api/stock-quote/${symbol}`
   console.log(url)
   return await tryCatchFetch(url, {
     method: "GET",

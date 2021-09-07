@@ -5,8 +5,7 @@ import Quote from '../components/Quote';
 
 class StockQuotePage extends Component {
   state = {
-    quote: null,
-    redirect: false
+    quote: []
   };
 
   async componentDidMount() {
@@ -26,7 +25,7 @@ class StockQuotePage extends Component {
 
     return (
       <div>
-        <h1>Stock Quote</h1>
+        <h1>Stock Quote: {this.props.match.params.symbol}</h1>
         {this.state.quote ? <span>
           <Quote {...this.state.quote} />
         </span> :
