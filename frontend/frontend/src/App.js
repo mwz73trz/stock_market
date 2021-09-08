@@ -11,7 +11,7 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Route path="/" component={HomePage} />
-            <Route path="/api/stock-quote/:symbol" exact component={StockQuotePage} />
+            <Route path="/api/stock-quote/:symbol" component={StockQuotePage} />
           </div>
         </BrowserRouter>
       </div>

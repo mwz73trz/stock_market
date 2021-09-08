@@ -5,7 +5,8 @@ import Quote from '../components/Quote';
 
 class StockQuotePage extends Component {
   state = {
-    quote: []
+    quote: null,
+    redirect: false
   };
 
   async componentDidMount() {
